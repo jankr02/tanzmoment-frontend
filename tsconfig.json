@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "esnext",  // Moderne JavaScript-Version verwenden
+    "module": "esnext",  // Verwende ES-Module, um moderne JavaScript-Features zu nutzen
+    "moduleResolution": "node",  // Stellen sicher, dass Node.js-Modulauflösung verwendet wird
+    "strict": true,  // Aktiviert alle strengen TypeScript-Überprüfungen
+    "noUnusedLocals": true,  // Überprüft, ob es unbenutzte Variablen gibt
+    "noUnusedParameters": true,  // Überprüft, ob es unbenutzte Parameter gibt
+    "esModuleInterop": true,  // Ermöglicht die Verwendung von CommonJS-Modulen mit ES6-Syntax
+    "skipLibCheck": true,  // Überprüft nicht die Typen von Bibliotheken, um schneller zu kompilieren
+    "forceConsistentCasingInFileNames": true,  // Erzwingt konsistente Groß-/Kleinschreibung bei Dateinamen
+    "outDir": "./dist",  // Ordner für den Build-Ausgabepfad
+    "baseUrl": ".",  // Legt den Basis-Pfad fest (relativ zum Projekt)
+    "paths": {
+      "@/*": ["src/*"]  // Erlaubt Aliase wie `@/components/Button.vue` für das Erstellen von Komponentenpfaden
+    }
+  },
+  "include": [
+    "src/**/*.ts",   // Alle TypeScript-Dateien im src-Ordner
+    "src/**/*.tsx",  // Alle TypeScript-Dateien mit JSX
+    "src/**/*.vue"   // Alle Vue-Komponenten, um TypeScript-Typen zu validieren
+  ],
+  "exclude": [
+    "node_modules"   // Schließt `node_modules` vom TypeScript-Compiler aus
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",  // Erbt von der Haupt-tsconfig
+  "compilerOptions": {
+    "target": "esnext",  // Für Node.js sollten wir auch esnext als Ziel verwenden
+    "module": "commonjs",  // Verwende CommonJS-Module für Node.js
+    "outDir": "./dist",  // Ausgabeordner für Build-Dateien
+    "esModuleInterop": true  // Kompatibilität mit CommonJS-Modulen
+  },
+  "include": [
+    "src/**/*.ts",  // Alle TypeScript-Dateien im src-Ordner
+    "src/**/*.d.ts" // Alle TypeScript-Definitionen
+  ],
+  "exclude": [
+    "node_modules"  // Schließt `node_modules` aus
+  ]
+}

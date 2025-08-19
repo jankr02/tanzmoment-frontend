@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",  // Verweist auf die Haupt-tsconfig, um alle allgemeinen Optionen zu übernehmen
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",  // Speicherort für TypeScript-Cache-Dateien (wird bei der nächsten Kompilierung genutzt)
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,  // Sorgt dafür, dass es keine unbeabsichtigten Fallthroughs in Switch-Anweisungen gibt
+    "noUncheckedSideEffectImports": true  // Verhindert nicht überprüfte Importe von Dateien, die Seiteneffekte haben könnten
+  },
+  "include": [
+    "src/**/*.ts",   // Alle TypeScript-Dateien im src-Ordner
+    "src/**/*.tsx",  // Alle TypeScript-Dateien mit JSX
+    "src/**/*.vue"   // Alle Vue-Komponenten, um sie in TypeScript zu integrieren
+  ]
+}
