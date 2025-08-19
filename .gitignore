@@ -1,0 +1,53 @@
+# Node.js
+/node_modules/
+
+# TypeScript
+*.tsbuildinfo
+
+# Vite
+/.vite/
+/dist/
+/node_modules/.vite/
+/public/
+
+# Build Output
+/dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Local environment files
+.env
+.env.*.local
+
+# Testing
+coverage/
+
+# Dependencies
+package-lock.json
+yarn.lock
+
+# Temporary files
+tmp/
+temp/
+
+# Prettier and ESLint
+.eslintcache
+.prettierignore
+/.prettier
+
+# Docker
+.docker/
+docker-compose.override.yml
+Dockerfile.dev
