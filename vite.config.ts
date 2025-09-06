@@ -1,5 +1,6 @@
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -32,11 +33,16 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        '@': '/src',
-        '@assets': '/src/assets',
-        '@router': '/src/router',
-        '@styles': '/src/styles',
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+        '@assets': fileURLToPath(new URL('./src/assets', import.meta.url)),
+        '@router': fileURLToPath(new URL('./src/router', import.meta.url)),
+        '@styles': fileURLToPath(new URL('./src/styles', import.meta.url)),
       },
+    },
+    test: {
+      environment: 'jsdom',
+      setupFiles: ['./vitest.setup.ts'],
+      coverage: { provider: 'v8' },
     },
   }
 })
