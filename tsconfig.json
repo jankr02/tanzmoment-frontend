@@ -3,6 +3,7 @@
     "target": "esnext",  // Moderne JavaScript-Version verwenden
     "module": "esnext",  // Verwende ES-Module, um moderne JavaScript-Features zu nutzen
     "moduleResolution": "node",  // Stellen sicher, dass Node.js-Modulauflösung verwendet wird
+    "incremental": true,  // Aktiviert inkrementelle Builds für schnellere Kompilierung
     "strict": true,  // Aktiviert alle strengen TypeScript-Überprüfungen
     "noUnusedLocals": true,  // Überprüft, ob es unbenutzte Variablen gibt
     "noUnusedParameters": true,  // Überprüft, ob es unbenutzte Parameter gibt
@@ -12,7 +13,10 @@
     "outDir": "./dist",  // Ordner für den Build-Ausgabepfad
     "baseUrl": ".",  // Legt den Basis-Pfad fest (relativ zum Projekt)
     "paths": {
-      "@/*": ["src/*"]  // Erlaubt Aliase wie `@/components/Button.vue` für das Erstellen von Komponentenpfaden
+      "@/*": ["src/*"],  // Erlaubt Aliase wie `@/components/Button.vue` für das Erstellen von Komponentenpfaden
+      "@assets/*": ["src/assets/*"],  // Alias für Assets
+      "@router/*": ["src/router/*"],  // Alias für Router-Dateien
+      "@styles/*": ["src/styles/*"]  // Alias für globale Styles
     }
   },
   "include": [

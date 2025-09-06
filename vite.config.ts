@@ -33,6 +33,9 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@': '/src',
+        '@assets': '/src/assets',
+        '@router': '/src/router',
+        '@styles': '/src/styles',
       },
     },
   }

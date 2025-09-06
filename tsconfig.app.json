@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.json",  // Verweist auf die Haupt-tsconfig, um alle allgemeinen Optionen zu übernehmen
   "compilerOptions": {
+    "incremental": true,  // Aktiviert inkrementelle Builds
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",  // Speicherort für TypeScript-Cache-Dateien (wird bei der nächsten Kompilierung genutzt)
     "strict": true,
     "noFallthroughCasesInSwitch": true,  // Sorgt dafür, dass es keine unbeabsichtigten Fallthroughs in Switch-Anweisungen gibt
