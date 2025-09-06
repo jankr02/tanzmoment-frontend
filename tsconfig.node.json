@@ -4,6 +4,8 @@
     "target": "esnext",  // Für Node.js sollten wir auch esnext als Ziel verwenden
     "module": "commonjs",  // Verwende CommonJS-Module für Node.js
     "outDir": "./dist",  // Ausgabeordner für Build-Dateien
+    "incremental": true,  // Aktiviert inkrementelle Builds für schnellere Kompilierung
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",  // Speicherort für TypeScript-Cache-Dateien
     "esModuleInterop": true  // Kompatibilität mit CommonJS-Modulen
   },
   "include": [
