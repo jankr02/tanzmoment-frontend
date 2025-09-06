@@ -33,3 +33,17 @@ Use the provided scripts to start or build with a specific mode:
 
 Set `VITE_SPLIT_CHUNKS=true` in the respective environment file to enable
 manual chunk splitting of vendor dependencies.
+
+## Continuous Integration
+
+Automated linting, testing and building run on GitHub Actions. The workflow is defined in `.github/workflows/ci.yml` and executes the same steps as local development.
+
+## Docker
+
+A multi-stage `Dockerfile` builds the app and serves the production files via Nginx.
+Build and run the container with:
+
+```bash
+docker build -t tanzmoment-frontend .
+docker run -p 8080:80 tanzmoment-frontend
+```
