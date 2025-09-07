@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => {
     : {}
 
   return {
+    cacheDir: 'node_modules/.cache/vite',
     plugins: [vue()],
     server: {
       port,
