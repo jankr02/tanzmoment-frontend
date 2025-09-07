@@ -2,8 +2,7 @@
   "root": true,
   "env": {
     "browser": true,
-    "es2021": true,
-    "vue/setup-compiler-macros": true
+    "es2021": true
   },
   "parser": "vue-eslint-parser",
   "parserOptions": {
@@ -15,7 +14,7 @@
   "plugins": ["vue", "@typescript-eslint"],
   "extends": [
     "eslint:recommended",
-    "plugin:vue/vue3-recommended",
+    "plugin:vue/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
