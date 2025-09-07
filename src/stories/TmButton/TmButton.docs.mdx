@@ -1,0 +1,19 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/blocks';
+import TmButton from './TmButton.vue';
+
+<Meta title="Components/TmButton" component={TmButton} />
+
+# TmButton
+
+Der `TmButton` nutzt die globalen Design Tokens für Farben, Radius und Schatten.
+
+<Canvas>
+  <Story id="components-tmbutton--default" />
+</Canvas>
+
+<ArgsTable of={TmButton} />
+
+## Accessibility
+
+- Semantisches `<button>`-Element
+- Sichtbarer Focus-Ring mit `.focus-ring`

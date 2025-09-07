@@ -1,0 +1,27 @@
+/*!
+ * Tanzmoment Design Tokens
+ * Fonts: DM Serif Display, Nunito, Rubik
+ */
+
+:root {
+  --color-primary-dark:#2F4937;
+  --color-primary:#E9D5D0;
+  --color-primary-light:#F4EDE9;
+  --color-secondary-dark:#876355;
+  --color-secondary:#D8A243;
+  --color-neutral-xlight:#F8F5F0;
+  --color-accent-dark:#B5805D;
+  --color-accent:#E5C6B3;
+  --color-soft-accent:#9EBAC2;
+  --radius-md:10px;
+  --shadow-1:0 1px 2px rgba(0,0,0,.06);
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+.focus-ring {
+  outline:2px solid var(--color-soft-accent);
+  outline-offset:2px;
+}
